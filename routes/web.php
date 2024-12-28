@@ -18,7 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// all Api here must be Api Authenticated
-Route::group(['middleware' => 'auth:api', 'namespace' => 'Api'], function () {
-    Route::post('get-main-categories', [CategoriesController::class, 'index']);
-});
+
